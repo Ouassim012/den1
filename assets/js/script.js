@@ -64,7 +64,7 @@ const bodyElement2 = document.querySelector("header"); // Define the bodyElement
 const bodyElement3 = document.querySelector("footer"); // Define the bodyElement variable
 
 
-const popup = document.getElementById("popup");
+const popup = document.getElementById("container1");
 
 /*pop up*/ 
 function openPopup() {
@@ -84,6 +84,20 @@ function ClosePopup() {
   bodyElement1.classList.remove("blur-background"); // Apply the 'blur-background' class to the body
   bodyElement2.classList.remove("blur-background"); // Apply the 'blur-background' class to the body
   bodyElement3.classList.remove("blur-background"); // Apply the 'blur-background' class to the body
+
+
 }
+
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container1");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
 
 
